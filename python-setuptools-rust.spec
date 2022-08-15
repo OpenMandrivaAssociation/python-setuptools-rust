@@ -13,6 +13,7 @@ ExclusiveArch:	%{rust_arches}
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(semantic-version) >= 2.6
+BuildRequires:  python3dist(typing-extensions)
 BuildRequires:	python3dist(toml) >= 0.9.0
 BuildRequires:  python3dist(tomli)
 BuildRequires:	python3dist(setuptools-scm) >= 3.4.3
