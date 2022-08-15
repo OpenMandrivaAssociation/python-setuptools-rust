@@ -1,21 +1,24 @@
 %bcond_with tests
 
 Name:		python-setuptools-rust
-Version:	0.12.1
+Version:	1.5.1
 Release:	1
 Summary:	Setuptools Rust extension plugin
 License:	MIT
 URL:		https://github.com/PyO3/setuptools-rust
-Source0:	https://files.pythonhosted.org/packages/12/22/6ba3031e7cbd6eb002e13ffc7397e136df95813b6a2bd71ece52a8f89613/setuptools-rust-%{version}.tar.gz
+Source0:	 https://pypi.io/packages/source/s/setuptools-rust/setuptools-rust-%{version}.tar.gz
 BuildArch:	noarch
 ExclusiveArch:	%{rust_arches}
 
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(semantic-version) >= 2.6
+BuildRequires:  python3dist(typing-extensions)
 BuildRequires:	python3dist(toml) >= 0.9.0
+BuildRequires:  python3dist(tomli)
 BuildRequires:	python3dist(setuptools-scm) >= 3.4.3
 BuildRequires:	python3dist(wheel)
+BuildRequires:	python3dist(pip)
 BuildRequires:	rust-packaging >= 1.45
 Requires:	rust-packaging >= 1.45
 
