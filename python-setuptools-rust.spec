@@ -2,7 +2,7 @@
 
 Name:		python-setuptools-rust
 Version:	1.5.1
-Release:	1
+Release:	2
 Summary:	Setuptools Rust extension plugin
 License:	MIT
 URL:		https://github.com/PyO3/setuptools-rust
