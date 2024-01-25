@@ -1,8 +1,8 @@
 %bcond_with tests
 
 Name:		python-setuptools-rust
-Version:	1.5.1
-Release:	2
+Version:	1.8.1
+Release:	1
 Summary:	Setuptools Rust extension plugin
 License:	MIT
 URL:		https://github.com/PyO3/setuptools-rust
@@ -54,4 +54,4 @@ cd ../..
 %license LICENSE
 %dir %{python_sitelib}/setuptools_rust
 %{python_sitelib}/setuptools_rust/*
-%{python_sitelib}/setuptools_rust-%{version}-py*.egg-info
+%{python_sitelib}/setuptools_rust*.*-info
