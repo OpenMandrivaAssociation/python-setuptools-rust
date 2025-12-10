@@ -1,24 +1,24 @@
 %bcond_with tests
 
 Name:		python-setuptools-rust
-Version:	1.9.0
+Version:	1.12.0
 Release:	1
 Summary:	Setuptools Rust extension plugin
 License:	MIT
 URL:		https://github.com/PyO3/setuptools-rust
-Source0:	 https://pypi.io/packages/source/s/setuptools-rust/setuptools-rust-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/s/setuptools_rust/setuptools_rust-%{version}.tar.gz
 BuildArch:	noarch
 ExclusiveArch:	%{rust_arches}
 
-BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(semantic-version) >= 2.6
-BuildRequires:  python3dist(typing-extensions)
-BuildRequires:	python3dist(toml) >= 0.9.0
-BuildRequires:  python3dist(tomli)
-BuildRequires:	python3dist(setuptools-scm) >= 3.4.3
-BuildRequires:	python3dist(wheel)
-BuildRequires:	python3dist(pip)
+BuildSystem:	python
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(semantic-version) >= 2.6
+BuildRequires:  python%{pyver}dist(typing-extensions)
+BuildRequires:	python%{pyver}dist(toml) >= 0.9.0
+BuildRequires:  python%{pyver}dist(tomli)
+BuildRequires:	python%{pyver}dist(setuptools-scm) >= 3.4.3
+BuildRequires:	python%{pyver}dist(wheel)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	rust-packaging >= 1.45
 Requires:	rust-packaging >= 1.45
 
@@ -26,16 +26,9 @@ Requires:	rust-packaging >= 1.45
 Setuptools helpers for Rust Python extensions. Compile and distribute Python
 extensions written in Rust as easily as if they were written in C.
 
-%prep
-%autosetup -n setuptools-rust-%{version}
+%prep -a
 # Remove bundled egg-info
 rm -rf setuptools-rust.egg-info
-
-%build
-%py_build
-
-%install
-%py_install
 
 %check
 PYTHONPATH=%{buildroot}%{python_sitelib} \
