@@ -8,7 +8,6 @@ License:	MIT
 URL:		https://github.com/PyO3/setuptools-rust
 Source0:	https://pypi.io/packages/source/s/setuptools_rust/setuptools_rust-%{version}.tar.gz
 BuildArch:	noarch
-ExclusiveArch:	%{rust_arches}
 
 BuildSystem:	python
 BuildRequires:	python%{pyver}dist(setuptools)
@@ -32,7 +31,7 @@ rm -rf setuptools-rust.egg-info
 
 %check
 PYTHONPATH=%{buildroot}%{python_sitelib} \
-    %{__python} -c "from setuptools_rust import RustExtension, version"
+    python -c "from setuptools_rust import RustExtension, version"
 
 %if %{with tests}
 cd examples/tomlgen
