@@ -18,8 +18,8 @@ BuildRequires:  python%{pyver}dist(tomli)
 BuildRequires:	python%{pyver}dist(setuptools-scm) >= 3.4.3
 BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	rust-packaging >= 1.45
-Requires:	rust-packaging >= 1.45
+#BuildRequires:	rust-packaging >= 1.45
+#Requires:	rust-packaging >= 1.45
 
 %description
 Setuptools helpers for Rust Python extensions. Compile and distribute Python
