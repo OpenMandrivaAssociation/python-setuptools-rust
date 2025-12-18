@@ -2,7 +2,7 @@
 
 Name:		python-setuptools-rust
 Version:	1.12.0
-Release:	1
+Release:	2
 Summary:	Setuptools Rust extension plugin
 License:	MIT
 URL:		https://github.com/PyO3/setuptools-rust
@@ -20,6 +20,7 @@ BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	python%{pyver}dist(pip)
 #BuildRequires:	rust-packaging >= 1.45
 #Requires:	rust-packaging >= 1.45
+Provides: python%{pyver}dist(setuptools_rust = %{version}-%{release}
 
 %description
 Setuptools helpers for Rust Python extensions. Compile and distribute Python
